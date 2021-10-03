@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&family=Roboto:wght@100;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap");
+
+$Noto: "Noto Sans KR", sans-serif;
+$Mono: "Roboto Mono", monospace;
+$Gamja: "Gamja Flower", cursive;
+$Raleway: "Raleway", sans-serif;
+$Roboto: "Roboto", sans-serif;
+
+$CurrentLine: #00346E;
+$Background: #002451;
+$Foreground: #FFFFFF;
+$Selection: #003F8E;
+$Comment: #7285B7;
+$Orange: #FFC58F;
+$Yellow: #FFEEAD;
+$Purple: #EBBBFF;
+$Green: #d1F1A9;
+$Black: #001126;
+$Aqua: #99FFFF;
+$Blue: #BBDAFF;
+$Dark: #001733;
+$Dim: #001C40;
+$Red: #FF9DA4;
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    color: $Foreground;
+    font-family: $Noto;
+    background-color: $Background;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+@import "./style/app.scss";
+@import "./style/header.scss";

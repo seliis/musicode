@@ -1,0 +1,22 @@
+header {
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    background-color: $Black;
+    justify-content: space-between;
+    .title {
+        font-family: $Roboto;
+        letter-spacing: 2px;
+        font-weight: 700;
+        cursor: pointer;
+        font-size: 20px;
+    }
+    i {
+        font-size: 20px;
+        cursor: pointer;
+        color: $Comment;
+        &.open {
+            color: $Blue;
+        }
+    }
+}
