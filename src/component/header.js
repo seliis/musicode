@@ -2,7 +2,7 @@ import React from "react"
 import { useSelector, useDispatch } from "react-redux"
 import { toggleMenu } from "../redux/storeHeader"
 
-export function Header() {
+export default function Header() {
     const menuStatus = useSelector(
         (state) => state.header.menuStatus
     )
@@ -24,5 +24,3 @@ export function Header() {
         </header>
     )
 }
-
-export default Header
