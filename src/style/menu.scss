@@ -1,0 +1,23 @@
+.menu {
+    z-index: 3;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $Black;
+    li {
+        text-transform: uppercase;
+        font-family: $Raleway;
+        letter-spacing: 3px;
+        text-align: center;
+        font-weight: 100;
+        font-size: 48px;
+        cursor: pointer;
+        padding: 10px 0;
+        width: 50%;
+        &:hover {
+            color: $Blue;
+        }
+    }
+}

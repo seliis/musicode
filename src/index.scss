@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&family=Roboto:wght@100;400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&family=Roboto:wght@100;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap");
@@ -37,7 +36,7 @@ body {
     width: 100vw;
     height: 100vh;
     color: $Foreground;
-    font-family: $Noto;
+    font-family: $Roboto;
     background-color: $Background;
 }
 
@@ -47,4 +46,5 @@ main {
 }
 
 @import "./style/app.scss";
+@import "./style/menu.scss";
 @import "./style/header.scss";
