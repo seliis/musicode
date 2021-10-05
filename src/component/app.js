@@ -14,19 +14,22 @@ export default function App() {
 
     useEffect(
         () => {
-            async function getMusicData() {
-                fetch("test.json").then(
-                    r => r.json()
-                ).then(
-                    r => {
-                        dispatch(setMusicData(r))
-                    },
-                    e => {
-                        console.log(e)
-                    }
-                )
+            if (window.location.pathname == "/") {
+                async function getMusicData() {
+                    fetch("test.json").then(
+                        r => r.json()
+                    ).then(
+                        r => {
+                            dispatch(setMusicData(r))
+                        },
+                        e => {
+                            console.log(e)
+                        }
+                    )
+                }
+                getMusicData()
+                return null
             }
-            getMusicData()
         }, []
     )
 

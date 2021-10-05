@@ -8,6 +8,7 @@ export const storeHeader = createSlice({
     reducers: {
         toggleMenu: (state) => {
             state.menuStatus = !state.menuStatus
+            console.log("menuStatus: " + state.menuStatus)
         }
     }
 })

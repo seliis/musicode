@@ -9,9 +9,18 @@ export default function Header() {
     )
     const dispatch = useDispatch()
 
+    function moveToHome() {
+        if (menuStatus) {
+            dispatch(toggleMenu())
+        }
+        if (window.location.pathname != "/") {
+            window.location.href = "/"
+        }
+    }
+
     return (
         <header>
-            <div className="title">
+            <div className="title" onClick={() => moveToHome()}>
                 {"MUSICODE"}
             </div>
             <i

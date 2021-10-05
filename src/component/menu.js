@@ -19,7 +19,7 @@ export default function Menu() {
         dispatch(toggleMenu())
     }
 
-    function getMenuList() {
+    function getMenuCode() {
         const menu = Object.getOwnPropertyNames(musicData)
         const code = []; for (let i=0; i<menu.length; i++) {
             const type = menu[i]
@@ -34,7 +34,7 @@ export default function Menu() {
 
     return (
         <ul className="menu">
-            {getMenuList()}
+            {getMenuCode()}
         </ul>
     )
 }
