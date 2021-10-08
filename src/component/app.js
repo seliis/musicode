@@ -1,8 +1,10 @@
 import React, { useEffect } from "react"
 import Header from "./header"
+import Board from "./board"
 import Menu from "./menu"
 
 import { useSelector, useDispatch } from "react-redux"
+import { toggleMenu } from "../redux/storeHeader"
 import { setMusicData } from "../redux/storeApp"
 
 export default function App() {
@@ -27,17 +29,29 @@ export default function App() {
                         }
                     )
                 }
+                // reset menu status for service landingpage view for reconnected visitors
+                if (menuStatus) {
+                    dispatch(toggleMenu())
+                }
                 getMusicData()
                 return null
             }
         }, []
     )
 
+    function getSection() {
+        const path = window.location.pathname
+        if (path == "/board") {
+            return <Board/>
+        }
+    }
+
     return (
         <div className="app">
             <Header/>
             <section>
                 {menuStatus ? <Menu/> : null}
+                {getSection()}
             </section>
         </div>
     )
