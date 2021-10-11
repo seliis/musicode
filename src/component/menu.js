@@ -2,7 +2,7 @@ import React from "react"
 
 import { useSelector, useDispatch } from "react-redux"
 import { toggleMenu } from "../redux/storeHeader"
-import { setMusicType } from "../redux/storeApp"
+import { setMusicType, setControlVisible } from "../redux/storeApp"
 
 export default function Menu() {
     const musicData = useSelector(
@@ -13,6 +13,7 @@ export default function Menu() {
 
     function moveToBoard(type) {
         if (window.location.pathname != "/board") {
+            dispatch(setControlVisible(true))
             window.location.href = "/board"
         }
         dispatch(setMusicType(type))
@@ -33,7 +34,7 @@ export default function Menu() {
     }
 
     return (
-        <ul className="menu">
+        <ul id="menu">
             {getMenuCode()}
         </ul>
     )

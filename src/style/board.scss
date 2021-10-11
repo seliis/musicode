@@ -1,45 +1,57 @@
 #board {
     height: 100%;
-    display: grid;
-    grid-template: 1fr 150px / 1fr;
     #board-list {
-        display: flex;
-        margin: 15px 0;
+        height: 100%;
         overflow-y: scroll;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
         &::-webkit-scrollbar {
             display: none;
         }
         .board-list-item {
             width: 97.5%;
-            height: 25%;
+            height: 100px;
             display: flex;
             cursor: pointer;
-            margin: 5px auto;
+            margin: 10px auto;
             border-radius: 10px;
             align-items: center;
+            border: 3px solid $Comment;
             background-color: $Dark;
             &:hover {
                 background-color: $Comment;
             }
+            &.active {
+                background: linear-gradient(45deg, #7474BF, #348AC7);
+            }
             .board-list-item-info {
-                padding: 0 25px;
+                margin: 0 25px;
+                overflow: hidden;
                 font-family: $Gamja;
-                text-shadow: 1px 1px 3px $Black;
+                white-space: nowrap;
+                text-shadow: 1px 1px 1px $Black;
                 .board-list-item-title {
-                    font-size: 24px;
+                    font-size: 28px;
                 }
                 .board-list-item-channelTitle {
                     color: $Purple;
-                    font-size: 20px;
+                    font-size: 24px;
                     font-weight: 700;
                 }
             }
         }
-    }
-    #board-control {
-        background-color: $Black;
+        @include Responsive {
+            .board-list-item {
+                margin: 22.5px auto;
+                height: 15%;
+                width: 95%;
+                .board-list-item-info {
+                    .board-list-item-title {
+                        font-size: 2.5rem;
+                    }
+                    .board-list-item-channelTitle {
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
     }
 }

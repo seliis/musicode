@@ -4,7 +4,7 @@ header {
     align-items: center;
     background-color: $Black;
     justify-content: space-between;
-    .title {
+    #title {
         font-family: $Raleway;
         letter-spacing: 2px;
         font-weight: 700;
@@ -17,6 +17,15 @@ header {
         color: $Comment;
         &.open {
             color: $Blue;
+        }
+    }
+    @include Responsive {
+        padding: 0 7.5%;
+        #title {
+            font-size: 3rem;
+        }
+        i {
+            font-size: 2.75rem;
         }
     }
 }

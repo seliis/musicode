@@ -20,6 +20,7 @@ import {
 import storage from "redux-persist/lib/storage" 
 
 // import each reducers
+import storeControl from "./storeControl"
 import storeHeader from "./storeHeader"
 import storeApp from "./storeApp"
 
@@ -34,7 +35,8 @@ export const Store = configureStore({
         combineReducers(
             {
                 app: storeApp,
-                header: storeHeader
+                header: storeHeader,
+                control: storeControl
             }
         )
     ),

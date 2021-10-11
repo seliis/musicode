@@ -4,7 +4,8 @@ export const storeApp = createSlice({
     name: "app",
     initialState: {
         musicData: null,
-        musicType: null
+        musicType: null,
+        controlVisible: false
     },
     reducers: {
         setMusicData: (state, action) => {
@@ -14,9 +15,13 @@ export const storeApp = createSlice({
         setMusicType: (state, action) => {
             state.musicType = action.payload
             console.log(state.musicType)
+        },
+        setControlVisible: (state, action) => {
+            state.controlVisible = action.payload
+            console.log("controlVisible: " + state.controlVisible)
         }
     }
 })
 
-export const { setMusicData, setMusicType } = storeApp.actions
+export const { setMusicData, setMusicType, setControlVisible } = storeApp.actions
 export default storeApp.reducer

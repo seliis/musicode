@@ -7,6 +7,7 @@ export default function Header() {
     const menuStatus = useSelector(
         (state) => state.header.menuStatus
     )
+    
     const dispatch = useDispatch()
 
     function moveToHome() {
@@ -20,7 +21,7 @@ export default function Header() {
 
     return (
         <header>
-            <div className="title" onClick={() => moveToHome()}>
+            <div id="title" onClick={() => moveToHome()}>
                 {"MUSICODE"}
             </div>
             <i

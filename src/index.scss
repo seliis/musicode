@@ -17,13 +17,19 @@ $Comment: #7285B7;
 $Orange: #FFC58F;
 $Yellow: #FFEEAD;
 $Purple: #EBBBFF;
-$Green: #d1F1A9;
+$Green: #D1F1A9;
 $Black: #001126;
 $Aqua: #99FFFF;
 $Blue: #BBDAFF;
 $Dark: #001733;
 $Dim: #001C40;
 $Red: #FF9DA4;
+
+@mixin Responsive {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
 
 * {
     margin: 0;
@@ -49,3 +55,5 @@ main {
 @import "./style/menu.scss";
 @import "./style/board.scss";
 @import "./style/header.scss";
+@import "./style/control.scss";
+@import "./style/loading.scss";

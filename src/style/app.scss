@@ -1,8 +1,17 @@
-.app {
+#app {
     height: 100%;
     display: grid;
     grid-template: 75px 1fr / 1fr;
+    &.controlVisible {
+        grid-template: 75px 1fr 150px / 1fr;
+    }
     section {
         overflow: hidden;
+    }
+    @include Responsive {
+        grid-template: 10% 1fr / 1fr;
+        &.controlVisible {
+            grid-template: 10% 1fr 15% / 1fr;
+        }
     }
 }
